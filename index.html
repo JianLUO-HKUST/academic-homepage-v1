@@ -1,0 +1,186 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academic Personal Homepage (V1)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="canvas-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="header-left">
+        <div class="window-controls" aria-hidden="true">
+          <span class="window-dot window-dot-red"></span>
+          <span class="window-dot window-dot-yellow"></span>
+          <span class="window-dot window-dot-green"></span>
+        </div>
+        <a href="#home" class="brand" id="brandName">Your Name</a>
+      </div>
+      <nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">Menu</button>
+        <ul class="nav-links" id="navLinks"></ul>
+      </nav>
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">中文</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="crumb" id="heroCrumb">Home / Academic Profile</p>
+          <p class="eyebrow" id="heroGreeting">Hello, I am</p>
+          <h1 id="heroName">Your Name</h1>
+          <div class="hero-affiliation-row">
+            <p class="affiliation" id="heroAffiliation">Department, University</p>
+            <span class="hero-phd-note" id="heroPhdNote">Preparing for 2027 Spring/Fall PhD applications</span>
+          </div>
+          <p class="interests" id="heroInterests">Research Interests: HCI, Visualization, AI for Creativity</p>
+          <div class="hero-cta">
+            <a id="cvButton" class="button button-primary" href="assets/cv-placeholder.pdf" download>Download CV</a>
+            <a class="button button-secondary" href="#contact" id="contactButton">Contact</a>
+          </div>
+          <div class="hero-panels">
+            <section class="mini-panel">
+              <h3 id="researchNotesTitle">Research Interests</h3>
+              <div class="note-stack" id="noteStack"></div>
+            </section>
+            <section class="mini-panel skills-panel">
+              <h3 id="skillsTitle">Skills</h3>
+              <h4 id="skillsProTitle">Proficient</h4>
+              <div class="skill-chips" id="skillsProList"></div>
+              <h4 id="skillsLearningTitle">Learning</h4>
+              <div class="skill-chips" id="skillsLearningList"></div>
+            </section>
+          </div>
+        </div>
+        <div class="hero-portrait-wrap">
+          <article class="profile-card">
+            <span class="hero-arrow" aria-hidden="true">↘</span>
+            <img id="heroPortrait" class="hero-portrait" src="assets/images/portrait.jpg" alt="Portrait" />
+            <h3 id="heroCardTitle">JianLUO</h3>
+            <p class="profile-subtitle" id="heroCardSubtitle">1st Year MPhil at HKUSTGZ</p>
+            <ul class="profile-meta">
+              <li id="heroProfileLocation">Based in Guangzhou, China</li>
+              <li id="heroProfileStatus">Open to research collaboration</li>
+              <li id="heroProfileAddress">Address Placeholder</li>
+            </ul>
+            <div class="profile-links">
+              <a id="heroLinkScholar" href="#" target="_blank" rel="noopener">
+                <span id="heroLinkScholarText">Scholar</span>
+              </a>
+              <a id="heroLinkGithub" href="#" target="_blank" rel="noopener">
+                <span id="heroLinkGithubText">GitHub</span>
+              </a>
+              <a id="heroLinkEmail" href="#">
+                <span id="heroLinkEmailText">Email</span>
+              </a>
+            </div>
+          </article>
+          <div class="hero-mini-notes" aria-hidden="true">
+            <span class="mini-note mini-note-green" id="heroMiniNote1">HCI Designer</span>
+            <span class="mini-note mini-note-yellow" id="heroMiniNote2">Kitchen Lover</span>
+            <span class="mini-note mini-note-pink" id="heroMiniNote3">Open to Collaboration</span>
+            <span class="mini-note mini-note-blue" id="heroMiniNote4">Design + Engineering</span>
+            <span class="mini-note mini-note-lavender" id="heroMiniNote5">Curious About the World</span>
+            <span class="mini-note mini-note-peach mini-note-dog">
+              <span class="mini-note-dog-text" id="heroMiniNote6">I have a dog named Xiaoman</span>
+              <svg class="dog-doodle" viewBox="0 0 120 64" aria-hidden="true">
+                <path d="M12 39 C16 30, 26 26, 38 28 L52 26 C60 20, 73 22, 76 30 L88 32 C95 34, 98 42, 93 48 C87 55, 75 52, 68 50 L52 52 C39 56, 27 55, 18 49 C13 46, 10 43, 12 39 Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M53 26 C48 20, 45 14, 48 11 C52 8, 58 11, 60 18" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="73" cy="35" r="1.8" fill="currentColor"/>
+                <path d="M83 39 C86 40, 88 42, 87 45" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+                <path d="M31 52 L29 60 M47 53 L45 61 M66 51 L64 60 M80 49 L79 58" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M11 35 C6 33, 5 29, 9 26" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="bio" class="section">
+      <div class="container">
+        <h2 id="bioTitle">Bio</h2>
+        <p id="bioText"></p>
+      </div>
+    </section>
+
+    <section id="research" class="section section-muted">
+      <div class="container">
+        <h2 id="researchTitle">Research</h2>
+        <p class="section-note" id="researchSectionNote">Academic studies currently ongoing or deeply involved in.</p>
+        <div id="researchList" class="research-board"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-muted">
+      <div class="container">
+        <h2 id="projectsTitle">Projects</h2>
+        <p class="section-note" id="projectsSectionNote">Practice-oriented project explorations.</p>
+        <div id="projectsGrid" class="project-grid"></div>
+      </div>
+    </section>
+
+    <section id="cv" class="section section-muted">
+      <div class="container">
+        <h2 id="cvTitle">CV</h2>
+        <div class="cv-download-card">
+          <p id="cvText"></p>
+          <p class="cv-emoji-line" aria-hidden="true">
+            <span class="cv-folder-icon">📁</span>
+            <svg class="cv-cursor-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 3l7.8 17.5 2.1-7 6.8 2.8L4 3z" fill="#ffffff" stroke="#11151b" stroke-width="1.6" stroke-linejoin="round"/>
+              <path d="M13.8 13.4l3.2 6.1" stroke="#11151b" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </p>
+          <a class="button button-primary" href="assets/cv-placeholder.pdf" download id="cvButtonInline">Download Full CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 id="contactTitle">Contact</h2>
+        <ul class="contact-list">
+          <li><strong id="contactLabelEmail">Email:</strong> <a id="contactEmail" href="mailto:your.name@university.edu">your.name@university.edu</a></li>
+          <li><strong id="contactLabelX">X:</strong> <span id="contactOffice">@username</span></li>
+          <li><strong id="contactLabelAddress">Address:</strong> <span id="contactScholar">Address Placeholder</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p id="footerText">© 2026 Your Name. All rights reserved.</p>
+      <div class="footer-art" aria-hidden="true">
+        <svg class="footer-mac-face-svg" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="0" y="0" width="16" height="16" rx="1.2" fill="#f7f7f6"/>
+          <rect x="3" y="4" width="2" height="2" fill="#2f333a"/>
+          <rect x="11" y="4" width="2" height="2" fill="#2f333a"/>
+          <rect x="5" y="10" width="6" height="1" fill="#2f333a"/>
+          <rect x="4" y="9" width="1" height="1" fill="#2f333a"/>
+          <rect x="11" y="9" width="1" height="1" fill="#2f333a"/>
+        </svg>
+        <span class="footer-hello-word">hello word.</span>
+      </div>
+    </div>
+  </footer>
+  </div>
+
+  <nav class="dock-nav" aria-label="Section navigation">
+    <ul class="dock-links" id="dockNavLinks"></ul>
+  </nav>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <button class="image-lightbox-close" id="imageLightboxClose" type="button" aria-label="Close preview">×</button>
+    <img class="image-lightbox-img" id="imageLightboxImg" src="" alt="Preview image" />
+  </div>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
