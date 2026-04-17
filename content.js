@@ -133,10 +133,10 @@
       "UX Research",
       "Design Prototype",
       "Figma",
-      "XR Design"
+      "XR Design",
+      "Vibecoding"
     ],
     skillsLearningItems: [
-      "Vibecdoing",
       "Arduino Hardware Development",
       "XR Development",
       "Interactive Storytelling"
@@ -400,10 +400,10 @@
       "用户研究",
       "设计原型",
       "Figma",
-      "XR 交互设计"
+      "XR 交互设计",
+      "Vibecoding"
     ],
     skillsLearningItems: [
-      "Vibecoding",
       "Arduino 硬件开发",
       "XR 开发",
       "互动叙事"
