@@ -1596,6 +1596,18 @@ body.lightbox-open {
 }
 
 @media (max-width: 780px) {
+  body {
+    padding: 10px;
+  }
+
+  .canvas-shell {
+    border-radius: 12px;
+  }
+
+  .container {
+    width: min(100% - 1rem, var(--max-width));
+  }
+
   .menu-toggle {
     display: inline-block;
   }
@@ -1623,7 +1635,7 @@ body.lightbox-open {
 }
 
   .section {
-    padding: 3.2rem 0;
+    padding: 2.7rem 0;
   }
 
   .note {
@@ -1634,11 +1646,22 @@ body.lightbox-open {
 
   .hero-panels {
     grid-template-columns: 1fr;
+    gap: 0.72rem;
   }
 
   .hero-phd-note {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-arrow {
+    left: -8px;
+    top: 8px;
+    font-size: 1.7rem;
+  }
+
+  .profile-card {
+    padding: 0.92rem 0.9rem 0.85rem;
   }
 
   .research-board {
@@ -1654,15 +1677,15 @@ body.lightbox-open {
   }
 
   .research-workbox {
-    padding: 0.8rem 0.8rem 0.7rem;
+    padding: 0.7rem 0.7rem 0.64rem;
   }
 
   .research-carousel {
-    min-height: 330px;
+    min-height: 250px;
   }
 
   .research-work-poster {
-    max-height: 360px;
+    max-height: 280px;
   }
 
   .research-carousel-controls {
@@ -1693,22 +1716,48 @@ body.lightbox-open {
   }
 
   .dock-nav {
-    width: calc(100vw - 1.1rem);
-    bottom: 8px;
+    width: calc(100vw - 0.4rem);
+    max-width: 560px;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 4px);
+    border-radius: 16px;
+    padding: 0.22rem;
   }
 
   .dock-links {
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .dock-links::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.24rem;
   }
 
   .dock-links li {
-    min-width: 84px;
+    min-width: 0;
+  }
+
+  .dock-links a {
+    min-height: 36px;
+    font-size: 0.76rem;
+    padding: 0.12rem 0.3rem;
+    gap: 0.24rem;
+    border-radius: 10px;
+  }
+
+  .dock-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .site-footer {
+    padding-bottom: calc(8.9rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 480px) {
+  .dock-links a {
+    font-size: 0.72rem;
+  }
+
+  .dock-label {
+    transform: none;
   }
 }
 
